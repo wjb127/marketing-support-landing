@@ -156,63 +156,68 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 지원 안내 섹션 */}
-      <section className="px-10 py-16 bg-gray-50">
-        <div className="max-w-[1200px] mx-auto">
-          <h2 className="text-2xl font-medium text-black text-center mb-12">
-            지원 안내
-          </h2>
-          
-          <div className="bg-white rounded-lg p-10">
-            {programDetails.map((detail, index) => (
-              <div key={index}>
-                <div className="flex gap-10">
-                  <div className="w-[150px] flex-shrink-0">
-                    <p className="font-medium text-lg text-gray-900">
-                      {detail.label}
-                    </p>
-                  </div>
-                  <div className="flex-1">
-                    {typeof detail.content === 'string' ? (
-                      <p className="text-lg font-medium text-gray-900">
-                        {detail.content}
-                      </p>
-                    ) : (
-                      <div>
-                        <p className="text-lg font-medium text-gray-900 mb-3">
-                          {detail.content.title}
-                        </p>
-                        {detail.content.details.length > 0 && (
-                          <div className="bg-gray-50 p-4 rounded">
-                            {detail.content.details.map((item, idx) => (
-                              <p 
-                                key={idx} 
-                                className={`text-sm ${idx === 0 ? 'font-semibold text-red-600 mb-2' : 'text-gray-600 ml-4'}`}
-                              >
-                                {item}
-                              </p>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    )}
-                  </div>
-                </div>
-                {index < programDetails.length - 1 && (
-                  <hr className="my-8 border-gray-200" />
-                )}
-              </div>
-            ))}
+      {/* 지원 안내 섹션 - Figma 정확한 스타일 */}
+      <section className="flex justify-center items-center py-16 bg-white">
+        <div className="w-[1439px] h-[489px] px-44 py-2.5 bg-white inline-flex flex-col justify-center items-center gap-[5px] overflow-hidden">
+          {/* 지원 기간 */}
+          <div className="w-40 h-7 px-5 py-2.5 bg-blue-600 inline-flex justify-center items-center overflow-hidden">
+            <div className="text-center justify-center text-white text-lg font-bold font-['Pretendard']">지원 기간</div>
           </div>
-
-          {/* CTA 버튼 */}
-          <div className="text-center mt-12">
-            <Link
-              href="/apply"
-              className="inline-block px-12 py-5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors text-xl"
-            >
-              지원하기
-            </Link>
+          <div className="w-[630px] h-10 px-5 py-2.5 bg-white inline-flex justify-start items-center overflow-hidden">
+            <div className="justify-center text-black text-lg font-semibold font-['Pretendard']">2025. 9. 12.(금) ~ 9. 26.(금) 18:00까지</div>
+          </div>
+          
+          {/* 모집 대상 */}
+          <div className="w-40 h-7 px-5 py-2.5 bg-blue-600 inline-flex justify-center items-center overflow-hidden">
+            <div className="text-center justify-center text-white text-lg font-bold font-['Pretendard']">모집 대상</div>
+          </div>
+          <div className="w-[630px] h-40 px-5 py-2.5 bg-white flex flex-col justify-start items-start overflow-hidden">
+            <div className="self-stretch h-32 flex flex-col justify-start items-start gap-[5px]">
+              <div className="justify-center text-black text-lg font-semibold font-['Pretendard']">관악구 소재 상시근로자 5인 미만의 소상공인 점포</div>
+              <div className="self-stretch justify-center">
+                <span className="text-black text-lg font-semibold font-['Pretendard']">※ 제외대상<br/></span>
+                <span className="text-black text-lg font-normal font-['Pretendard']">
+                  2022~2024년 동일 사업에 참여한 이력이 있는 점포<br/>
+                  유흥, 사행성, 도박 등 중소기업 육성기금 융자지원 제한 업종<br/>
+                  매장형 가게 아닌 점포(사무실, 병원, 숙박시설, 고시원 등)<br/>
+                  프랜차이즈 본점 또는 가맹점, 체인점
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          {/* 지원 방법 */}
+          <div className="w-40 h-7 px-5 py-2.5 bg-blue-600 inline-flex justify-center items-center overflow-hidden">
+            <div className="text-center justify-center text-white text-lg font-bold font-['Pretendard']">지원 방법</div>
+          </div>
+          <div className="w-[630px] h-24 px-5 py-2.5 bg-white flex flex-col justify-start items-start overflow-hidden">
+            <div className="self-stretch h-28 flex flex-col justify-start items-start gap-[5px]">
+              <div className="justify-center text-black text-lg font-bold font-['Pretendard']">사이트 접수, 이메일 접수</div>
+              <div className="self-stretch justify-center">
+                <span className="text-black text-lg font-normal font-['Pretendard']">
+                  사이트 주소: gwanak-biz.kr<br/>
+                  이메일 주소: gwanak@bmcreative.co.kr<br/>
+                </span>
+                <span className="text-black text-lg font-semibold font-['Pretendard']">※ &lt;필수&gt; 서류를 모두 제출하셔야 접수가 완료됩니다.</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* 선발 방법 */}
+          <div className="w-40 h-7 px-5 py-2.5 bg-blue-600 inline-flex justify-center items-center overflow-hidden">
+            <div className="text-center justify-center text-white text-lg font-bold font-['Pretendard']">선발 방법</div>
+          </div>
+          <div className="w-[630px] h-24 px-5 py-2.5 bg-white flex flex-col justify-start items-start overflow-hidden">
+            <div className="self-stretch h-28 flex flex-col justify-start items-start gap-[5px]">
+              <div className="justify-center text-black text-lg font-bold font-['Pretendard']">서류 심사</div>
+              <div className="self-stretch justify-center">
+                <span className="text-black text-lg font-normal font-['Pretendard']">
+                  사이트 주소: gwanak-biz.kr<br/>
+                  이메일 주소: gwanak@bmcreative.co.kr<br/>
+                </span>
+                <span className="text-black text-lg font-semibold font-['Pretendard']">※ &lt;필수&gt; 서류를 모두 제출하셔야 접수가 완료됩니다.</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
