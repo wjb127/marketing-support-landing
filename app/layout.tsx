@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className="antialiased min-h-screen flex flex-col">
+    <html lang="ko" suppressHydrationWarning>
+      <body className="antialiased min-h-screen flex flex-col" suppressHydrationWarning>
         <Header />
         <main className="flex-1" style={{ marginTop: '80px' }}>
           {children}

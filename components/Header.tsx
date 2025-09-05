@@ -19,14 +19,13 @@ export default function Header() {
       <div className="container-width h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.png"
+            src="/images/관악구 CI(세로형).jpg"
             alt="관악구 로고"
             width={58}
             height={60}
             priority
-            className="mr-3"
+            className="mr-3 object-contain"
           />
-          <span className="text-2xl font-bold">관악구</span>
         </Link>
 
         <nav>
