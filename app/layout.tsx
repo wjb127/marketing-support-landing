@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="ko">
       <body className="antialiased min-h-screen flex flex-col">
         <Header />
-        <main className="flex-1 pt-20">
+        <main className="flex-1" style={{ marginTop: '80px' }}>
           {children}
         </main>
         <Footer />
