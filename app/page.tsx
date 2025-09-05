@@ -9,7 +9,10 @@ export default function Home() {
         className="relative w-full flex items-center justify-center" 
         style={{ 
           height: '450px',
-          background: 'rgb(221, 240, 255)' // Figma 정확한 색상
+          backgroundImage: 'url(/images/hero-bg.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundColor: 'rgb(221, 240, 255)' // Fallback color
         }}
       >
         <div className="container-width text-center">
@@ -30,8 +33,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 스마트플레이스 */}
             <div className="text-center p-8">
-              <div className="w-24 h-24 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <span className="text-3xl">📍</span>
+              <div className="relative w-[220px] h-[135px] mx-auto mb-4">
+                <Image
+                  src="/images/service-1.png"
+                  alt="스마트플레이스"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold mb-3" style={{ fontSize: '18px', lineHeight: '26px' }}>
                 가게별 스마트플레이스 등 최적화
@@ -44,8 +52,13 @@ export default function Home() {
 
             {/* 홍보 콘텐츠 */}
             <div className="text-center p-8">
-              <div className="w-24 h-24 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center">
-                <span className="text-3xl">📸</span>
+              <div className="relative w-[218px] h-[129px] mx-auto mb-4">
+                <Image
+                  src="/images/service-2.png"
+                  alt="콘텐츠 제작"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <h3 className="font-bold mb-3" style={{ fontSize: '18px', lineHeight: '26px' }}>
                 가게별 맞춤형 홍보 콘텐츠 제작 지원

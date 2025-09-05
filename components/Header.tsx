@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 export default function Header() {
   const pathname = usePathname()
@@ -17,6 +18,14 @@ export default function Header() {
     <header className="fixed top-0 w-full bg-white z-50 border-b border-gray-200">
       <div className="container-width h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
+          <Image
+            src="/images/logo.png"
+            alt="관악구 로고"
+            width={58}
+            height={60}
+            priority
+            className="mr-3"
+          />
           <span className="text-2xl font-bold">관악구</span>
         </Link>
 
